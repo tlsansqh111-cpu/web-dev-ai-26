@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블의 구조</title>
+</head>
+<body>
+    <h2>기본표시</h2>
+    <table border="1">
+        <tr>
+            <td>브라우저</td>
+            <td>제조사</td>
+        </tr>
+        <tr>
+            <td>chrome</td>
+            <td>구글</td>
+        </tr>
+         <tr>
+           <td>safari</td>
+            <td>애플</td>
+         </tr>
+          </table>
+        
+         <h2>행/열 합치기</h2>
+         <table border="1">
+            <tr>
+                <th rowspan="2">이름</th>
+                <th>니케바오</th>
+            </tr>
+               <tr>
+                <th>루이바오</th>
+            </tr>
+            <tr>
+                <th colspan="2">주소</th>
+            </tr>
+            <tr>
+                <td colspan="2">경기도 화성 소고기 </td>
+         </table>
+
+          <h2>테이블 구조</h2>
+
+          <table border="1">
+            <thead>
+                <caption>바오 패밀리 친구들 </caption>
+            <tr>
+                <td>이름</td>
+                <td>나이</td>
+                <td colspan="1">주소</td>
+            </thead>
+            </tr>
+            <tbody>
+            <tr>
+                <td>태식이</td>
+                <td>26</td>
+                <td>경기도 안양</td>
+            </tr>
+            <tfoot></tfoot>
+            <tr>
+               <td>춘식이</td>
+               <td>30</td>
+               <td>부산</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+               <th colspan="2">총 마리수</th>
+               <td colspan="1">2</td>
+            </tr>
+           </tfoot>
+         </table>
+
+         <br>
+     <h2>판다 유치원 성적표</h2>
+
+
+          <table border="1">
+            <thead>
+                <caption>바오 패밀리 성적표 </caption>
+
+            <tr>
+                <th rowspan="2">학생 이름</th>
+                <th colspan="3">과목</th>
+                <th rowspan="2">평균</th>
+            </tr>
+               <tr>
+                <th>대나무 먹기</th>
+                <th>나무 타기</th>
+                <th>구르기</th>
+            </tr>
+            </thead>
+            </tr>
+            <tbody>
+            <tr>
+                <td>루이바오</td>
+                <td>100</td>
+                <td>90</td>
+                <td>90</td>
+                <td>95</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>후이바오</td>
+                <td>95</td>
+                <td>85</td>
+                <td>90</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>코식이</td>
+                <td>80</td>
+                <td>70</td>
+                <td>85</td>
+                <td>78.3</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+               <th colspan="4">총 출석일수</th>
+               <td colspan="1">120일</td>
+            </tr>
+            </tfoot>
+
+
+</body>

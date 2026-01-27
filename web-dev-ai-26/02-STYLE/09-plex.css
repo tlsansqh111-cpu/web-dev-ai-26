@@ -1,0 +1,20 @@
+.container {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+.item {
+    background: white;
+    border: 2px, solid, #333;
+    padding: 1rem;
+    text-align: center;
+}
+/* flex-direction */
+.fd {
+    /* colum : 세로 방향, row : 가로 방향
+       colum-reverse : 세로 반대 방향,
+       row-reverse : 가로반대 방향
+    */
+    
+    flex-direction: colum;
+}

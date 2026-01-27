@@ -1,0 +1,70 @@
+
+/* 배경 마진 */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(orange, orangered )
+}
+.profilecard {
+    width: 300px;
+    padding: 60px 10px;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.profile-card {
+    width: 300px;
+    padding: 60px 20px;
+    border: 5px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+/* 프로필 이미지 원형 처리 */
+.image-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+}
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-imge {
+    background-image: url(../asset/panda.png);
+    background-size: cover;
+    background-position: center;
+}
+/* 버튼 공통 스타일 */
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.btn {
+    display: block;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+/* GitHub 버튼: 흰색 배경 */
+.btn-github {
+    background-color: white;
+    color: #333;
+}
+.btn-instagram {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid white;
+    color: white;
+}

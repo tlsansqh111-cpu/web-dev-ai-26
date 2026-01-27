@@ -9,8 +9,8 @@ body {
 }
 .profilecard {
     width: 300px;
-    padding: 60px 10px;
-    border: 5px solid rgba(255, 255, 255, 0.7);
+    padding: 50px 10px;
+    border: 3px solid rgba(255, 255, 255, 1);
     border-radius: 10px;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -23,7 +23,7 @@ body {
     text-align: center;
     color: white;
 }
-/* 프로필 이미지 원형 처리 */
+/* 프로필 이미지 원형 */
 .image-wrapper {
     width: 130px;
     height: 130px;
@@ -55,7 +55,6 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: all 0.2s ease;
 }
 
 /* GitHub 버튼: 흰색 배경 */
@@ -64,7 +63,16 @@ body {
     color: #333;
 }
 .btn-instagram {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1.5px solid white;
     color: white;
+}
+profil-card a:hover {
+
+}
+.profile-card a:last-of-type {
+    background: rgba(255, 255, 255, 0.1);
+}
+.btn:hover {
+    opacity: 0.8;
 }

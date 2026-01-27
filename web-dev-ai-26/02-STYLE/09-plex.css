@@ -16,5 +16,102 @@
        row-reverse : 가로반대 방향
     */
     
-    flex-direction: colum;
+    flex-direction: row-reverse;
+}
+/* justify-content / align-items */
+.ja {
+    height: 200px;
+    flex-direction: column;
+    /* justify-content : 주축 정렬
+       align-items : 교차축 정렬 
+    */
+    /* flex-start : 왼쪽/상단 정렬,
+      (flex)-end : 오른쪽/ 하단 정렬 
+      center : 가운데 정렬 
+      space-between : 양 끝 정렬 
+      space-around : 균일 간격 정렬
+      space-evenly : 동일 간격 정렬
+    */
+    justify-content: space-evenly;
+    align-items: end;
+}
+/* flex-wrop */
+.fw {
+    height: 400px;
+  /* nowrap : 줄바꿈 x 
+     wrap : 줄바꿈 o
+     wrap-reverse : 역방향 줄바꿈*/
+    flex-wrap: wrap;
+    /* 여러 줄인 경우만 사용 가능 */
+    align-content: space-between;
+}
+.fw .item {
+    width: 100px;
+    height: 100px;
+}
+/* align-self */
+.as {
+    height: 300px;
+}
+.as .self-start {
+    align-self: flex-start;
+}
+.as .self-center {
+    align-self: center;
+}
+.as .self-end {
+    align-self: end;
+}
+
+/* order
+    -기본값은 -,
+    왼쪽으로 갈수록 -, 오른쪽으로 갈수록+
+*/
+.order1 {
+    order: 1;
+}
+.order3 {
+    order: 1;
+}
+.gap {
+    gap: 20px;
+}
+/* flex-grow : 남은 공간 분배 */
+.grow-1 {
+    flex-grow: 1
+}
+.grow-2 {
+    flex-grow: 2;
+}
+.grow-3 {
+    flex-grow: 1;
+}
+
+/* flex/shrink : 부족한 공간 압축 
+   0 - 줄어들지 않음
+*/
+.shrink .item {
+    width: 200px;
+}
+.shrink-1 {
+    flex-shrink: 0;
+}
+.shrink-2 {
+    flex-shrink: 2;
+}
+.shrink-3 {
+    flex-shrink: 2;
+}
+/* flex-basis */
+.basis-1 {
+    flex-basis: 100px;
+}
+.basis-2 {
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+.basis-3 {
+    /* flex : flex-grow flex-shrink flex-basic */
+    /* flex : 1 1 0 */
+    flex: 1;
 }

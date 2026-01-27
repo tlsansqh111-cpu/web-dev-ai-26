@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(orange, orangered )
+    background: linear-gradient(120deg, orange, rgb(228, 5, 72) )
 }
 .profilecard {
     width: 300px;

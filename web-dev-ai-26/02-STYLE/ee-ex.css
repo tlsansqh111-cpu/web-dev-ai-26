@@ -1,0 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.font {
+
+}
+.transition {
+    transition: all 1s ease;
+}
+.transition:hover {
+    transition: scale(1.2);
+    background: #ffa114;
+}
+.scale {
+    background: indianred;
+    transform: scale(3);
+}
+.scale:hover {
+    transform: scale(1.2);
+}
+.rotate {
+    background: indigo;
+}
+.rotate:hover {
+    transform: rotate(30deg);
+}
+
+
+.rotate {
+ transform: translate(20px, 50px);
+ }
+ .skew {
+    transform: skew(-10deg);
+ }
+  .skew:hover {
+    transform: skew(-10deg);
+ }
+ /* Animation */
+ @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+ }
+ .ani-once {
+    animation: bounce 2s linear;
+ }
+ .ani-loop {
+    background: navy;
+    animation: bounce 2s linear infinite;
+ }
+ .ani-pause {
+    background: salmon;
+    animation: bounce 1s linear infinite;
+ }
+ .ani-pause:hover {
+    animation-play-state: paused;
+ }
+ .perspctive {
+    /* 원근 거리 */
+    perspective: 600px;
+ }
+.P-3D {
+    background: seagreen;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.P-3D:hover {
+    transform: rotateY(180deg);
+}

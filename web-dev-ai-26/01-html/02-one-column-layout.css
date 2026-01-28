@@ -1,5 +1,5 @@
-
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,6 +15,24 @@
     text-align: center;
     color: white;
 }
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: rgba(255, 255, 255, 0.1); /* 반투명 헤더 */
+    backdrop-filter: blur(10px); /* 배경 흐림 효과로 고급스럽게 */
+    z-index: 1000;
+}
+
+.logo { font-weight: 900; color: white; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: white; font-weight: 500; opacity: 0.8; transition: 0.3s; }
+nav ul li a:hover { opacity: 1; }
 
 
 .sec-1 {

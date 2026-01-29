@@ -1,3 +1,10 @@
-body {
-    background-color: lightcoral;
+/* scss 변수 */
+$main-color:#5d17ff;
+$main-color: #fff;
+$border-size: 5px;
+button {
+    background-color: var(--maun-color);
+    color:var(--text-color);
+    border-radius: var(--border-size);
+    border: none;
 }

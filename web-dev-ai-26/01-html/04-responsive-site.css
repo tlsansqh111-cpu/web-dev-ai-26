@@ -1,0 +1,125 @@
+/* 기본 스타일 (데스크탑 우선) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: white;
+    padding: 10px; 
+}
+.header h1{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2rea;
+}
+.header p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rea;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 32px; 
+    font-weight: 900; 
+}
+/* nav-links 헤더 목차 */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(49, 49, 49, 0.253);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* main-item 원형 모형 */
+.main-item {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.design {
+    background-color: #c95d55;
+}
+.develop {
+    background-color: #ff8a5c;
+}
+.support {
+    background-color: #629e9d;
+}
+.Host {
+    background-color: #4a86b3;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px; 
+    max-width: 350px;
+    border: 1px solid #eee;
+}
+
+.card img {
+     width: 100%;
+      display: block; }
+
+.card-info { padding: 15px; }
+
+/* 태블릿 이하 (700px 미만) */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .circle {
+        width: 100px; 
+        border-radius: 30px;
+    }
+
+    .card {
+        max-width: 100; /* 카드가 화면 꽉 차게 */
+    }
+}

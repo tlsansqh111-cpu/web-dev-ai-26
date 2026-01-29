@@ -99,7 +99,7 @@ body {
 .ratio-card:nth-child(2) {
     aspect-ratio: 4 / 3;
 }
-.ratio-card:last-child(3) {
+.ratio-card:last-child {
     aspect-ratio: 1/1;
 }
 

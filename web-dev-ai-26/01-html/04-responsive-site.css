@@ -19,6 +19,7 @@ body {
     text-align: center;
     font-size: 2rea;
     font-weight: bold;
+    justify-content: space-around;
 }
 /* 헤더 목차 오른쪽 이동 감소 중앙 배치 */
 .navbar {
@@ -118,7 +119,9 @@ body {
         flex: 1,1 calc(45%); 
     }
 }
-/* 600px 미만) */
+/* 700px 미만) */
+
+
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 24px;
@@ -128,7 +131,8 @@ body {
         gap: 10px;
     }
     .nav-links a {
-        font-size: 12px;
+        font-size: 16px;
+
     }
     .circle {
         width: 150px;

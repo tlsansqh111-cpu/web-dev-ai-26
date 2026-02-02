@@ -10,17 +10,41 @@
     <ol style="line-height: 2">
       <li>
         아이디가 'admin'이면 '관리자입니다'를 출력하시오.
-        <script></script>
+        <script>
+            let userId = 'admin'; // 아이디 변수 (예시)
+            if (userId === 'admin') 
+            console.log('관리자입니다');
+        </script>
       </li>
 
       <li>
         필기/실기 시험 모두 80점 이상이면 '합격', 아니면 '불합격'을 출력하시오.
-        <script></script>
+        <script>
+            let writtenExam = 85; 
+            let practicalExam = 78;
+
+            let result = "";
+
+            // 2. 조건에 따라 변수에 값을 넣습니다.
+            if (writtenExam >= 80 && practicalExam >= 80) {
+                result = "합격";
+                } else {
+                result = "불합격";
+}
+            console.log(`"성적 결과" 필기: ${writtenExam}점,  실기: ${practicalExam}점,  ${result}입니다.`);
+        </script>
       </li>
 
       <li>
         정수가 10과 20 사이인지 판별하시오.
-        <script></script>
+        <script>
+             let num = 15;
+             if (num >= 10 && num <= 20) 
+                console.log(`${num1}`)
+
+             console.log(`정수${a}_${result}`); //  true
+             console.log(`정수${b}_${result}`); // false
+        </script>
       </li>
 
       <li>

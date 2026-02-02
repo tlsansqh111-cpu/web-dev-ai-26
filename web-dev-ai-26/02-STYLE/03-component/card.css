@@ -21,3 +21,6 @@
     font-size: 2rem;
     font-weight: bold;
 }
+.card_title--thin {
+    font-weight: 100;
+}

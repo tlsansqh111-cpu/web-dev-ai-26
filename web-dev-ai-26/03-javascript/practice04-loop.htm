@@ -77,8 +77,6 @@
               console.log(food);
             }
           }
-
-
         </script>
       </li>
 
@@ -86,6 +84,16 @@
         배열에서 가장 큰 숫자를 찾아 출력하시오.
         <script>
           const nums = [3, 45, 21, 99, 18, 77];
+
+          let max = nums[0];
+
+          for (let i = 1; i < nums.length; i++) {
+            if (nums[i] > max) {
+              max = nums[i];
+            }
+          }
+          console.log(max);
+
         </script>
       </li>
 

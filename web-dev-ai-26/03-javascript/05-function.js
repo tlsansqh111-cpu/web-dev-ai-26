@@ -1,10 +1,13 @@
 //1. 매개변수 x 리턴값 x
 // function 함수명() {}
 function sayHello() {
-  console.log("안녕하세요!");
+  console.log("안녕하세요!"); {
 }
 sayHello(); //함수 호출
 sayHello();
+}
+
+greet("");
 
 //2. 매개변수 o 리턴값 x
 
@@ -14,12 +17,10 @@ sayHello();
 */
 function greet(name = "게스트") {
   console.log(`${name}님, 안녕하세요!`);
-}
-
-greet("붕어");
-greet("잉어");
-greet("블롭피쉬");
+greet("");
+greet("");
 greet();
+}
 
 // 3. 매개변수 x 리턴값 o
 

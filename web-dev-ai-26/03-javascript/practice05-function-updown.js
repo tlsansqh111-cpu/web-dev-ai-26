@@ -1,5 +1,5 @@
 // 1부터 100까지의 랜덤 숫자를 생성하고
-   const ran =(Math.ceil(Math.random() * 100) + 1); 
+   const ran =(Math.ceil(Math.random() * 100) + 0); 
    console.log(`${ran}`) //랜덤 숫자
    let count = 0;// 카운트 숫자 
 

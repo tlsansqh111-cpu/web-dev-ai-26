@@ -24,7 +24,7 @@ const ran = randoms[Math.floor(Math.random() * 3)];
     if (player === ran) {
         console.log("무승부")
         alert(`무승부.` ) //메세지 띄우기 코드
-        break;
+        
         } else if (
             (player === "가위" && computer === "보" ) ||
             (player === "바위" && computer === "가위" ) ||
@@ -32,11 +32,11 @@ const ran = randoms[Math.floor(Math.random() * 3)];
         )  {
         console.log("승리.");
         alert("승리.")
-        break;
+        
         } else {
             console.log("패배")
             alert("패배.")
-            break;
+            
     }
 }
         

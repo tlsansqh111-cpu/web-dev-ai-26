@@ -14,6 +14,8 @@
 
 
  while (true) {
+    // const player = prompt("가위, 바위, 보 중 하나를 입력해주세요");
+    // console.log(player);
     const ran = randoms[Math.floor(Math.random() * 3)];
     console.log(` ${ran}`);
     count= 0;
@@ -30,11 +32,12 @@
    let computer = ran;
    
 
-    if (player === ran) {
+    if (player === computer) {
         draw++
         console.log("무승부")
-        alert(`무승부.` )
+        alert(`무승부. 플레이어: ${player} 컴퓨터: ${computer}`)
         
+        // 승리 : 가위(0), > 보(2), 바위(1) > 가위(0) > 보(2) > 바위(1)
         } else if (
             (player === "가위" && computer === "보" ) ||
             (player === "바위" && computer === "가위" ) ||
@@ -42,12 +45,12 @@
         )  {
         wins++
         console.log("승리.");
-        alert("승리.")
+        alert(`승리. 플레이어: ${player} 컴퓨터: ${computer}`)
         
         } else {
             lose++
             console.log("패배")
-            alert("패배.")
+            alert(`패배. 플레이어: ${player} 컴퓨터: ${computer}`)
             
     }
 }

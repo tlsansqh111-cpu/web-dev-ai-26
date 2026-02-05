@@ -20,3 +20,56 @@ console.log(Math.ceil(Math.random() * 10));
 
 // 5~ 15까지의 랜덤 숫자
 console.log(Math.ceil(Math.random() * 10) + 5);
+
+// Date 객체
+const now = new Date ();
+// 현재 날짜 및 시간
+console.log(now);
+console.log(`
+    ${now.getFullYear()}년 ${now.getMonth() + 1}월 ${now.getDate()}일`,
+);
+
+//
+const date = new Date(2026, 7, 20, 18, 10, 0)
+console.log(date);
+
+//
+const date2 = new Date("2026-08-20")
+console.log(date2.toLocaleDateString("ko-KR",{weekday:"long" }));
+
+//형식 지정
+const date3 = new Date("2026-08-20T18:10:00")
+console.log(date3.toLocaleDateString("en-CA"));
+
+// String
+const str = new string("Hello, JavaScript!");
+console.log(str.length);
+
+// 1000 = 1초
+setTimeout(() => {
+    console.log("3초 후 실행!");
+}, 3000);
+
+let sec = 0;
+// 일정 시간마다 반복 실행
+setInterval(() => {
+    console.log(`{++sec}초!`);
+}, 1000);
+
+// JSON
+const obj = {
+    name: "김도연",
+    age: 12,
+};
+// 객체 - > 문자열
+const JsonStr = JSON.stringify(obj);
+console.log(obj, typeof obj);
+console.log(JsonStr, typeof JsonStr);
+// 문자열 -> 객체
+const jsonParse = JSON.parse(jeonStr);
+console.log(jsonParse);
+
+// BOM
+console.log(location.href);
+console.log(location.host);
+console.log(location.pathname);

@@ -86,7 +86,11 @@ const p2= new person("홍승아",3);
 p2.hello();
 
 class person2 {
-     constructor() {
-
+     // 객체 생성시 호출
+     constructor(name, age) {
+          this.name = name;
+          this.age = age;
      }
 }
+const p3 = new person2("홍서윤", 2);
+p3.hello();

@@ -28,7 +28,7 @@
 
    let player = input;
    let computer = ran;
-   count
+   
 
     if (player === ran) {
         draw++

@@ -23,7 +23,7 @@
           // 2 x 1 = 2
           // 2 x 2 = 4
 
-          for(let i = 1; i<=2;i++) {
+          for(let i = 1; i<=9;i++) {
             console.log(`2*${i}=${2 * i}`)
           }
         </script>
@@ -33,10 +33,13 @@
       <li>
         1부터 사용자에게 입력받은 숫자까지의 합을 출력하시오. (prompt 사용)
         <script>
-          const a = prompt("숫자를 입력");
+          // let sum = 0; = 입력값 1개씩합
+          //let sum = 0;
+           const a = prompt("숫자를 입력");
 
           for (let i = 1; i <= a; i++) {
             console.log(i);
+            //console.log(sum);
           }
 
         </script>
@@ -56,6 +59,9 @@
       <li>
         주어진 숫자 배열에서 짝수만 출력하는 반복문을 작성하시오.
         <script>
+          // for (value of numbers){console.log(value)}
+          // numbers.forEach(value) => {if value % 2 === 0) console.log(value) }
+          // const even = number.filter((value) => {return value % 2 === 0;});
           const numbers = [12, 7, 9, 20, 33, 16];
           numbers.sort((a, b) => a - b);
           for (let i= 0 ; i < numbers.length; i++) {
@@ -71,6 +77,7 @@
         주어진 문자열 배열에서 글자 수가 3자 이상인 단어만 출력하시오.
         <script>
           const words = ["오므라이스", "라면", "불고기", "된장찌개", "김밥"];
+          // for (let i = 0; i < word.lengh; i++) {if (word[i].length >=3) console.log(words[i])}
 
           for (const food of words) {
             if (food.length >= 3) {
@@ -83,6 +90,13 @@
       <li>
         배열에서 가장 큰 숫자를 찾아 출력하시오.
         <script>
+          // 다양한 풀이 방식 
+          // nums.sort((a,b) => a,b); 
+          // console.log[nums.length - 1]); 배열과 덱스 위치 값
+          // nums.reverse();
+          // console.log(nums[0]);
+          // max = Math.max(...nums);
+          // console.log(max); Math ...nums ...의 뜻은?
           const nums = [3, 45, 21, 99, 18, 77];
 
           let max = nums[0];
@@ -103,7 +117,8 @@
         <script>
          for (let i = 1; i <= 10; i++) {
             if (i === 8) break; // break 종료의 뜻으로 입력 값은 출력이 안된다.
-            if (i % 2 === 0) continue; {            
+            if (i % 2 === 0) continue; {    
+              // (i % 2 !== 0)        
             console.log(i);
           }
         }

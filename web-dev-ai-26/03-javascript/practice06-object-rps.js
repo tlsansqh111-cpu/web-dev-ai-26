@@ -26,9 +26,9 @@ const ran = randoms[Math.floor(Math.random() * 3)];
         alert(`무승부.` ) //메세지 띄우기 코드
         break;
         } else if (
-            (player === "가위" && computer ==="보" ) ||
-            (player === "바위" && computer ==="가위" ) ||
-            (player=== "보" && computer ==="바위" )
+            (player === "가위" && computer === "보" ) ||
+            (player === "바위" && computer === "가위" ) ||
+            (player=== "보" && computer === "바위" )
         )  {
         console.log("승리.");
         alert("승리.")

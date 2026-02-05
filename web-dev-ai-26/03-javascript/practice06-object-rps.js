@@ -4,7 +4,7 @@
     2: "보",
   };
 
-  let wins = 0;
+  let win = 0;
   let draw = 0;
   let lose = 0;
   
@@ -24,7 +24,7 @@
 
     if (input === null) {
         console.log("null");
-        alert(`종료합니다. ${wins}승${draw}무${lose}패`)
+        alert(`종료합니다. ${win}승${draw}무${lose}패`)
         break;
     }
 
@@ -43,7 +43,7 @@
             (player === "바위" && computer === "가위" ) ||
             (player=== "보" && computer === "바위" )
         )  {
-        wins++
+        win++
         console.log("승리.");
         alert(`승리. 플레이어: ${player} 컴퓨터: ${computer}`)
         

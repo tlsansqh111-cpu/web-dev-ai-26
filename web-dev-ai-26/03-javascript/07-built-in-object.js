@@ -70,6 +70,9 @@ const jsonParse = JSON.parse(jeonStr);
 console.log(jsonParse);
 
 // BOM
-console.log(location.href);
-console.log(location.host);
-console.log(location.pathname);
+console.log(location.href); // 전체 주소
+console.log(location.host); // 호스트 명(도메인)
+console.log(location.pathname); // 경로
+
+// 페이지 이동
+location.href = "https://www.naver.com";

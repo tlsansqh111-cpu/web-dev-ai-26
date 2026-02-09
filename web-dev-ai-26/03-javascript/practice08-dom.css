@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    /* 배경색이 바뀌는 1초 */
+    transition: background-color 1s ease;
+    background-color: #f0f0f0; /* 초기 색상 */
+}
+
+.time-section h1 {
+    font-size: 4rem;
+    margin: 5px 0;
+    letter-spacing: 2px;
+}
+
+.wise-section {
+    margin-top: 10px;
+}

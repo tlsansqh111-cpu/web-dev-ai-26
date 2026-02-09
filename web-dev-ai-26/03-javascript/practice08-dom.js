@@ -18,21 +18,27 @@ const quotes = [
 ];
 
 
-function updateClock() {
+ function Clock() {
     const now = new Date();
+   // 숫자를 두 자리로 만들 때 사용
+    const minute = String(now.getMinutes()).padStart(2, "0");
     
     // 날짜 표시
-    const dayList = ['일', '월', '화', '수', '목', '금', '토'];
-    const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} (${dayList[now.getDay()]})`;
-    document.getElementById('date-display').innerText = dateStr;
+    const weeks = ['일', '월', '화', '수', '목', '금', '토'];
+    const week = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} (${weeks[now.getDay()]})`;
+    document.getElementById('date-display').innerText = week;
 
     // 시계 표시
     document.getElementById('clock-display').innerText = now.toTimeString().split(' ')[0];
 
-    // 남은 시간 계산 (올해 말까지)
-    const endOfYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
-    const diff = endOfYear - now;
-    
+    // 남은 시간 계산 (올해 말까지) 11월 31일 23시 59분 59초 (월은 0부터)
+    const endYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
+    // diff 컴퓨터 시간 1=1.000ms(Millisecond)
+    const diff = endYear - now;
+    // day = 1초*60(초)*60(분)*24(시);
+    // hour = 1초*60(초)*60(분)) % 24(시);
+    // minute = (1초*60(초) % 60(분);
+    // second = (1초) %60(초);
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const m = Math.floor((diff / (1000 * 60)) % 60);
@@ -42,13 +48,13 @@ function updateClock() {
 }
 
 // 3. 배경색 및 문구 변경 함수 (3초 주기)
-function rotateContent() {
+function randombox() {
     const container = document.getElementById('container');
     
     // 랜덤 파스텔톤 배경색 생성
-    const r = Math.floor(Math.random() * 56 + 200); 
-    const g = Math.floor(Math.random() * 56 + 200);
-    const b = Math.floor(Math.random() * 56 + 200);
+    const r = Math.floor(Math.random() * 60 + 200); 
+    const g = Math.floor(Math.random() * 60 + 200);
+    const b = Math.floor(Math.random() * 60 + 200);
     container.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
     // 랜덤 문구 선택
@@ -58,8 +64,16 @@ function rotateContent() {
 }
 
 // 4. 초기 실행 및 반복 설정
-updateClock();      // 실행 즉시 시간 표시
-rotateContent();    // 실행 즉시 첫 문구 표시
+Clock();      // 실행 즉시 시간 표시
+randombox();    // 실행 즉시 첫 문구 표시
 
-setInterval(updateClock, 1000);   // 1초마다 시계 갱신
-setInterval(rotateContent, 3000); // 3초마다 배경/문구 갱신
+setInterval(Clock, 1000);   // 1초마다 시계 갱신
+setInterval(randombox, 3000); // 3초마다 배경/문구 갱신
+
+const randomQuote = () => {
+    // 0부터 quotes.length까지 랜덤값
+    // console.log(quotes [Math.floor(Math.random() * quotes.length)];
+    const quote = quotes [Math.floor(Math.random() * quotes.length)];
+    console.log(quote.en);
+    console.log(quote.ko);
+}

@@ -25,11 +25,11 @@ const quotes = [
     
     // 날짜 표시
     const weeks = ['일', '월', '화', '수', '목', '금', '토'];
-    const week = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} (${weeks[now.getDay()]})`;
-    document.getElementById('date-display').innerText = week;
+    const week = `${now.getFullYear()} ${String(now.getMonth() + 1).padStart(2, '0')} (${weeks[now.getDay()]})`;
+    document.querySelector('#date-display').innerText = week;
 
     // 시계 표시
-    document.getElementById('clock-display').innerText = now.toTimeString().split(' ')[0];
+    document.querySelector('#clock-display').innerText = now.toTimeString().split(' ')[0];
 
     // 남은 시간 계산 (올해 말까지) 11월 31일 23시 59분 59초 (월은 0부터)
     const endYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
@@ -44,12 +44,12 @@ const quotes = [
     const m = Math.floor((diff / (1000 * 60)) % 60);
     const s = Math.floor((diff / 1000) % 60);
     
-    document.getElementById('remain-display').innerText = `올해 남은 시간: ${d}일 ${h}시간 ${m}분 ${s}초`;
+    document.querySelector('#remain-display').innerText = `올해 남은 시간: ${d}일 ${h}시간 ${m}분 ${s}초`;
 }
 
 // 3. 배경색 및 문구 변경 함수 (3초 주기)
 function randombox() {
-    const container = document.getElementById('container');
+    const container = document.querySelector('#container');
     
     // 랜덤 파스텔톤 배경색 생성
     const r = Math.floor(Math.random() * 60 + 200); 
@@ -58,9 +58,9 @@ function randombox() {
     container.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
     // 랜덤 문구 선택
-    const randomIdx = Math.floor(Math.random() * quotes.length);
-    document.getElementById('quote-en').innerText = quotes[randomIdx].en;
-    document.getElementById('quote-ko').innerText = quotes[randomIdx].ko;
+    const randomcomment = Math.floor(Math.random() * quotes.length);
+    document.querySelector('#quote-en').innerText = quotes[randomcomment].en;
+    document.querySelector('#quote-ko').innerText = quotes[randomcomment].ko;
 }
 
 // 4. 초기 실행 및 반복 설정
@@ -70,10 +70,9 @@ randombox();    // 실행 즉시 첫 문구 표시
 setInterval(Clock, 1000);   // 1초마다 시계 갱신
 setInterval(randombox, 3000); // 3초마다 배경/문구 갱신
 
-const randomQuote = () => {
-    // 0부터 quotes.length까지 랜덤값
-    // console.log(quotes [Math.floor(Math.random() * quotes.length)];
-    const quote = quotes [Math.floor(Math.random() * quotes.length)];
-    console.log(quote.en);
-    console.log(quote.ko);
-}
+// const randomQuote = () => {
+  // 0부터 quotes.length까지 랜덤값
+  // console.log(quotes [Math.floor(Math.random() * quotes.length)];
+  // const quote = quotes [Math.floor(Math.random() * quotes.length)];
+  //  console.log(quote-en);
+  //  console.log(quote.ko);

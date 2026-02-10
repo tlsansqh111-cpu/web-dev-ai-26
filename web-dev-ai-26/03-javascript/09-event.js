@@ -77,8 +77,30 @@ document.addEventListener("keyup", (e) => {
         y += 50;
     }  
     
-    move.style.top = `${y}px`);
-    move.style.top = `${x}px`);
+    (move.style.top = `${y}px`);
+    (move.style.top = `${x}px`);
+});
+/*
+// 5. 이벤트 위임
+// 이미지를 클릭할 때마다 해당 이미지 지우기
+const img = document.querySelector(".container img");
+for (let i = 0; i < img.length; i++) {
+    img[i].addEventListener("click", () => {
+        //img[i].style.display = "none";
+        //e.target.style.display = "none";
+        e.currentTarget.style.display = "none";
+    });
 }
-    
+*/
+
+const container = document.querySelector(".container");
+container.addEventListener("click", (e) => {
+    console.log(e.target); // 내가 클릭한 것
+    console.log(e.currentTarget); // 이벤트가 걸린 본인
+    if(e.target !== e.currentTarget) {
+      e.target.style.display = "none";
+    }
+});
+container.addEventListener("click", removeHandler);
+
 

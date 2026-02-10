@@ -45,12 +45,12 @@ console.log(`일치 개수 : ${count}`);
 //1등 당첨 : 6개 일치
 if(count === 6) {
   console.log(` 1등 당첨! ${counter}번 만에 맞추셨네요! `);
-  break;
+
 } else if(count === 5 && my.includes(bonus)) {
   //2등 당첨 : 5개 일치 + 보너스
   console.log(
     `2등 당첨! ${counter}번 만에 맞추셨네요!`);
-  break;
+
 } else if(count === 5) {}
   //3등 당첨 : 5개 일치
   //4등 당첨 : 4개 일치

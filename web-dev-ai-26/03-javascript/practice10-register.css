@@ -1,0 +1,55 @@
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -5px;
+    }
+
+
+.id-group, .repassword-group, .name-group, .email-group, .phone-group {
+    margin-bottom: 10px;
+    justify-content: center; 
+    align-items: center;
+
+    
+}
+
+input {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    
+}
+
+
+#idword, #pw, #pwword, #ida, #repassword, #repw, #name, #email, #phone {
+    
+    color: #777;
+    margin-top: 4px;
+    border-radius: 5px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitBtn { background-color: #d1d9e6; }
+#passwordbtn { background-color: #e2e8f0; }

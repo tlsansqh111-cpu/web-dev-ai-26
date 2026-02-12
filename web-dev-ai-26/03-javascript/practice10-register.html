@@ -11,47 +11,40 @@
  <div class="container">
       <h1>회원가입</h1>
       <form id="reg">
-        <div class="id-group">
-          <input type="text" id="idword" placeholder="아이디를 입력해주세요" />
-          <div id="ida">영문자로 시작하고 영문자와 숫자 조합으로 4~12자이내</div>
-            
-        </div>
+  <div class="id-group">
+    <input type="text" id="idword" placeholder="아이디를 입력해주세요" />
+    <div id="idMsg">영문자로 시작하고 영문자와 숫자 조합으로 4~12자이내</div>
+  </div>
 
-        <div class="id-group">
-          <input type="password" id="pwword"placeholder="비밀번호를 입력해주세요" />
-          <div id="pw">영문자, 숫자, 특수문자 조합으로 8~15자 이내</div>
-          
-        </div>
+  <div class="id-group">
+    <input type="password" id="pwword" placeholder="비밀번호를 입력해주세요" />
+    <div id="pwMsg">영문자, 숫자, 특수문자 조합으로 8~15자 이내</div>
+  </div>
 
-        <div class="repassword-group">
-          <input type="password" id="repw" placeholder="비밀번호를 다시 한 번 입력해주세요"/>
-          <div id="repassword">위 비밀번호와 동일하게</div>
-        
-        </div>
+  <div class="repassword-group">
+    <input type="password" id="repw" placeholder="비밀번호를 다시 한 번 입력해주세요"/>
+    <div id="repwMsg">위 비밀번호와 동일하게</div>
+  </div>
 
-        <div class="name-group">
-          <input type="text" id="name" placeholder="이름을 입력해주세요" />
-          <div id="name">한글2자 이상</div>
-    
-        </div>
+  <div class="name-group">
+    <input type="text" id="name" placeholder="이름을 입력해주세요" />
+    <div id="nameMsg">한글 2자 이상</div>
+  </div>
 
-        <div class="email-group">
-          <input type="text" id="email" placeholder="이메일을 입력해주세요" />
-          <div id="email">이메일 형식</div>
-          
-        </div>
+  <div class="email-group">
+    <input type="text" id="email" placeholder="이메일을 입력해주세요" />
+    <div id="emailMsg">이메일 형식</div>
+  </div>
 
-        <div class="phone-group">
-          <input type="text" id="phone" placeholder="전화번호를 입력해주세요" />
-          <div id="phone">전화번호 형식</div>
-          
-        </div>
+  <div class="phone-group">
+    <input type="text" id="phone" placeholder="전화번호를 입력해주세요" />
+    <div id="phoneMsg">전화번호 형식</div>
+  </div>
 
-        <div class="btn-group">
-          <button type="submit" id="submitBtn">회원가입</button>
-          <button type="password" id="passwordbtn">취소</button>
-        </div>
-      </form>
-    </div>
+  <div class="btn-group">
+    <button type="submit" id="submitBtn" disabled style="opacity: 0.5;">회원가입</button>
+    <button type="button" id="passwordbtn">취소</button>
+  </div>
+</form>
         <script src="./practice10-register.js"></script>
     </body>

@@ -14,7 +14,7 @@ const emailMsg = document.querySelector("#email + div");
 const phoneMsg = document.querySelector("#phone + div");
 
 // 로그인/프로필 관련
-const loginForm = document.querySelector("#login-form");
+
 const loginPage = document.querySelector(".page1");
 const profilePage = document.querySelector("#page2-container");
 const loginIdInput = document.querySelector('#username');
@@ -24,9 +24,7 @@ const goToSignUpBtn = document.querySelector('#click');
 const logoutBtn = document.querySelector('#logoutclick');
 const drawBtn = document.querySelector('#drawclick');
 
-const welcomeMsg = document.querySelector('.welcome');
-const emailDisplay = document.querySelector('#display-email');
-const phoneDisplay = document.querySelector('#display-phone');
+
 
 // 회원가입 상태 관리
 let checks = { idword: false, pwword: false, repw: false, name: false, email: false, phone: false };

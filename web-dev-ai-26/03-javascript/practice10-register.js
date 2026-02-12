@@ -9,45 +9,106 @@ const phone = document.querySelector("#phone");
 const submitBtn = document.querySelector("#submitBtn");
 const cancelBtn = document.querySelector("#passwordbtn");
 
+let check1 = false;
+let check2 = false;
+let check3 = false;
+let check4 = false;
+let check5 = false;
+let check6 = false;
+
 // 이벤트가 입력하는 순간 - 6개, 버튼 클릭 -2개
-const inputCheck = (input, regExp, inputCheck, message) => {
-idword.addEventListener("input", () => {
-    const regExp = /^[a-zA-z][a-zA-Z0-9]{3,11}$/;
-    if (regExp.test(idword.value)) {
-        idCheck.textContent = "OK!";
-        idCheck.style.color = "#0063b2";
-    } else if (idword.value === "") {
-        "영문자로 시작하고 영문자와 숫자 조합으로 4~12자 이내";
-        idCheck.style.color = "#707070";
+const inputCheck = (input, reg, inputCheck, message) => {
+  input.addEventListener("input", () => {
+    const regExp = reg;
+    if (regExp !== null) {
+      if (regExp.test(input.value)) {
+        inputCheck.textContent = "OK!";
+        inputCheck.style.color = "#0063b2";
+        if (
+          input.getAttribute("id") === "pwd" &&
+          input.value === pwdDouble.value
+        ) {
+          pwdDoubleCheck.textContent = "OK!";
+          pwdDoubleCheck.style.color = "#0063b2";
+        }
+        if (input.getAttribute("id") === "id") check1 = true;
+        if (input.getAttribute("id") === "pwd") check2 = true;
+        if (input.getAttribute("id") === "username") check4 = true;
+        if (input.getAttribute("id") === "email") check5 = true;
+        if (input.getAttribute("id") === "phone") check6 = true;
+      } else if (input.value === "") {
+        inputCheck.textContent = message;
+        inputCheck.style.color = "#707070";
+        if (input.getAttribute("id") === "pwd") {
+          pwdDoubleCheck.textContent = "위 비밀번호와 동일하게";
+          pwdDoubleCheck.style.color = "#707070";
+        }
+        if (input.getAttribute("id") === "id") check1 = false;
+        if (input.getAttribute("id") === "pwd") check2 = false;
+        if (input.getAttribute("id") === "username") check4 = false;
+        if (input.getAttribute("id") === "email") check5 = false;
+        if (input.getAttribute("id") === "phone") check6 = false;
+      } else {
+        inputCheck.textContent = message;
+        inputCheck.style.color = "red";
+        if (pwdDouble.value !== "" && input.getAttribute("id") === "pwd") {
+          pwdDoubleCheck.textContent = "위 비밀번호와 동일하게";
+          pwdDoubleCheck.style.color = "red";
+        }
+        if (input.getAttribute("id") === "id") check1 = false;
+        if (input.getAttribute("id") === "pwd") check2 = false;
+        if (input.getAttribute("id") === "username") check4 = false;
+        if (input.getAttribute("id") === "email") check5 = false;
+        if (input.getAttribute("id") === "phone") check6 = false;
+      }
     } else {
-        idCheck.textContent =
-            "영문자로 시작하고 영문자와 숫자 조합으로 4~12자 이내";
-        idCheck.style.color = "red";
+      // 예외!
+      if (input.value === pwd.value) {
+        inputCheck.textContent = "OK!";
+        inputCheck.style.color = "#0063b2";
+        if (input.getAttribute("id") === "pwdDouble") check3 = true;
+      } else if (input.value === "") {
+        inputCheck.textContent = message;
+        inputCheck.style.color = "#707070";
+        if (input.getAttribute("id") === "pwdDouble") check3 = false;
+      } else {
+        inputCheck.textContent = message;
+        inputCheck.style.color = "red";
+        if (input.getAttribute("id") === "pwdDouble") check3 = false;
+      }
     }
+
+    if (check1 && check2 && check3 && check4 && check5 && check6) {
+      signup.disabled = false; // 클릭 이벤트가 활성화
+    } else {
+      signup.disabled = true;
+    }
+  });
+};
+inputCheck(
+  pwd,
+  /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!-/:-@[-`{-~])[A-Za-z\d!-/:-@[-`{-~]{8,15}$/,
+  pwdCheck,
+  "영문자, 숫자, 특수문자 조합으로 8~15자 이내",
+);
+
+inputCheck(pwdDouble, null, pwdDoubleCheck, "위 비밀번호와 동일하게");
+
+inputCheck(username, /^[가-힣]{2,}$/, nameCheck, "한글 2자 이상");
+
+inputCheck(
+  email,
+  /^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]+$/,
+  emailCheck,
+  "이메일 형식",
+);
+
+inputCheck(phone, /^010-[0-9]{4}-[0-9]{4}$/, phoneCheck, "전화번호 형식");
+
+signup.addEventListener("click", () => {
+  alert("회원가입 완료!");
 });
-}
-pw.addEventListener("input", () => {
-    // 영문자, 숫자, 특수문자 조합으로 8~15자 이내
-    const regExp = /^[!-~][8,15]$/;
+cancel.addEventListener("click", () => {
+  location.reload();
 });
-repw.addEventListener("input", () => {
-    
-});
-username.addEventListener("input", () => {
-    // 한글 2자 이상
-    const regExp = /^[가-힣]{2,}$/;
-});
-email.addEventListener("input", () => {
-    // 이메일 형식 : admib@google.com
-    // \. \없으면 .을 인지 못함
-    const regExp = /^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
-});
-phone.addEventListener("input", () => {
-    // 전화번호 형식 : 010-0000-0000
-    // {4} 몇자리 숫자 제한 수치 값
-    const regExp = /^010-[0-9]{4}-[0-9]{4}$/;
-});
-submitBtn.addEventListener("click", () => {});
-cancelBtn.addEventListener("click", () => {
-    reloding
-});
+

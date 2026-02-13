@@ -30,7 +30,7 @@ document.querySelector("#fetchCoins").addEventListener("click", () => {
         }
       }
 
-      const combinedObject = {
+      const role = {
         market: ticker.market,
         trade_price: ticker.trade_price,
         change: ticker.change,
@@ -40,7 +40,7 @@ document.querySelector("#fetchCoins").addEventListener("click", () => {
       };
 
       // 데이터 불러오기 push
-      Data.push(combinedObject);
+      Data.push(role);
     }
     Data.forEach(coin => {
       const changeType = coin.change; // RISE, FALL, EVEN
@@ -48,7 +48,7 @@ document.querySelector("#fetchCoins").addEventListener("click", () => {
       const rate = (coin.signed_change_rate * 100).toFixed(2);
 
 
-      // ai도움 +=
+      // ai도움 +=, ${coin.trade_price.toLocaleString()}원
       result.innerHTML += `
         <div class="coin-card">
           <div class="market-code">${coin.market}</div>

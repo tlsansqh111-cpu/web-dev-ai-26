@@ -2,7 +2,7 @@ document.querySelector("#fetchCoins").addEventListener("click", () => {
   const result = document.querySelector("#coinResult");
 
   const fetchUpbitData = async () => {
-    // 1. 데이터 가져오기 
+    // 데이터 가져오기 
     const marketRes = await fetch("https://api.upbit.com/v1/market/all");
     const marketNames = await marketRes.json();
 

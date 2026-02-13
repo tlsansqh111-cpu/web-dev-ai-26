@@ -48,7 +48,7 @@ document.querySelector("#fetchCoins").addEventListener("click", () => {
       const rate = (coin.signed_change_rate * 100).toFixed(2);
 
 
-      // ai도움 +=, ${coin.trade_price.toLocaleString()}원
+      // ai도움 += : 아래 항목 +갱신, ${coin.trade_price.toLocaleString()}원
       result.innerHTML += `
         <div class="coin-card">
           <div class="market-code">${coin.market}</div>

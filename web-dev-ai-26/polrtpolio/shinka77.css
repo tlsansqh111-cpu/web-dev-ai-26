@@ -1,0 +1,174 @@
+/* 기본 초기화 및 폰트 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #aae0fa; /* 배경 하늘색 */
+  color: #333;
+}
+
+.wrap {
+  max-width: 1980px; /* 요청하신 기준 사이즈 */
+  margin: 0 auto;
+  background-color: #aae0fa;
+  overflow: hidden;
+  position: relative;
+}
+
+/* === 메인 히어로 (동영상 배경) === */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 700px; /* 영상 영역 높이 */
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 영상을 꽉 차게 */
+  z-index: 0;
+  opacity: 1; /* 불투명도 없음 */
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hero-title h1 {
+  font-family: "Dancing Script", cursive; /* 필기체 폰트 적용 */
+  font-size: 8rem;
+  color: #1b2665; /* 짙은 네이비 */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+/* === 메인 콘텐츠 공통 === */
+.main-content {
+  padding: 0 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 40px;
+  padding: 50px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 20;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* === About Me 카드 === */
+.about-card {
+  margin-top: -150px; /* 동영상 영역 위로 살짝 겹치게 끌어올림 */
+}
+
+.profile-img-wrap {
+  position: absolute;
+  top: -80px;
+  right: 80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-flex {
+  display: flex;
+  gap: 80px;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.contact-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.keywords {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 10px;
+}
+
+.keywords span {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.about-right {
+  flex: 2;
+}
+
+.about-right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.about-right .country {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2;
+}

@@ -1,0 +1,32 @@
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    /* 배경색이 바뀔 때 1초 동안 부드럽게 변함 */
+    transition: background-color 1s ease;
+    background-color: #f0f0f0; /* 초기 색상 */
+}
+
+.time-section h3 {
+    font-size: 2rem;
+    margin: 5px 0;
+}
+.time-section h1 {
+    font-size: 4rem;
+    margin: 5px 0;
+    letter-spacing: 2px;
+}
+
+.quote-section {
+    margin-top: -20px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+
+/* ggg */
+/* 기본 레이아웃 설정 */

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>변수와 연산자</h1>
+    <h2>1. var, let, const</h2>
+    <script>
+        // 변수 : 값을 담는 공간
+        // 변수명 = 값
+        var oldvar = 1;
+
+        // let : 변수 - 값을 바꿀 수 o (가끔)
+        let nickname = "이은경";
+        nickname = "고은정";
+        console.log(nickname);
+
+        // const : 상수 - 값을 바꿀 수 x (자주)
+        const name = "김도연"; 
+        console.log(name);
+        // name = 황지민
+    </script>
+
+    <h2>2. 자료형과 typeof</h2>
+    <script>
+       const userId = "안지훈"; // 문자열 - string
+       console.log(typeof userId);
+       const age = 15; // 숫자 = number
+       console.log(typeof age);
+       let check = true; // 논리형 - boolean
+       check = false;
+       console.log(typeof check);
+       let unknown; // 값이 정의되지 않음 - underfinde
+       console.log(unknown);
+       let isNone = null; // 값이 없음 - null
+       console.log(typeof isNone);
+    </script>
+
+    <h2>3. 문자열 & 템플릿 리터럴</h2>
+    <script>
+      const hobby = "게임";
+      console.log("내 취미는 " + hobby + "입니다")
+      console.log(`내 취미는 ${hobby}입니다`)
+    </script>
+
+    <h2>4. 숫자</h2>
+    <script>
+      const num1 = 10;
+      const num2 = 3;
+      console.log(num1 + num2); // 13
+      console.log(num1 - num2); // 7
+      console.log(num1 * num2); // 30
+      console.log(num1 / num2); // 3.3333.....
+      console.log(num1 % num2); // 1 = 나머지
+      console.log(num1 ** num2); // 1000 - 제곱
+      
+      // 문자 -> 숫자
+      console.log(typeof Number(100));
+      console.log(Number("Hello"));
+      
+      // 숫자 -> 문자
+      console.log(typeof string(100));
+
+      // 숫자 제거 -> 정수
+      console.log(parseIent(3.9)); // 3
+
+      // 숫자 -> 문자
+      console.log(parseIent("3.14")); // 3.14
+    </script>
+    <h2> 5.   Boolean과 비교 연산자</h2>
+    <script>
+      console.log(true);
+      console.log(false);
+
+      // Boolean 변환
+      console.log(Boolean("Hello")); // true
+      console.log(Boolean("")); // false
+
+      console.log(Boolean(1)); //true
+      console.log(Boolean(0)); //false
+
+      const a = 100;
+      const b = "100";
+
+      // 100이랑 "100"이랑 같은가?
+      console.log(a == b); // true
+      console.log(a === b); // false (숫자 100이랑 문자 100 비교 - 타입까지 비교)
+      
+      // 100이랑 "100"이랑 같지 않은가?
+      console.log(a != b); // false
+      console.log(a !== b); // true (타입까지 비교)
+
+      const c = 200;
+      console.log(a < c); // 100 < 200 - true
+      console.log(a > c); // 100 > 200 - false
+      console.log(a <= c); // 100보다 200이 크거나 같은가?
+      console.log(a >= c); // 100보다 200이 작거나 같은가?
+    </script>
+
+    <h2>6. 논리 연산자</h2>
+    <script>
+      const x = 10;
+      const y = 20;
+
+      // &&  : 그리고(and) -  둘 다 true이어야 true
+      console.log(x < 15&& y > 10); //true
+      console.log(x > 15&& y > 10); //false
+
+      // ll : 또는ㄴ
+
+
+    </script>
+  </body>
+</html>

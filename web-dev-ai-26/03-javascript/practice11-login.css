@@ -1,0 +1,121 @@
+body {
+    background-color: #f3f3f7; /* 이미지의 연한 회색 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.page1 h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #bcbcbc;
+}
+
+.btn-blue {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 0, 255, 0.74); /* 이미지의 파란색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.links {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #9b9b9b;
+    display: inline-block;
+}
+
+#click {
+    background: none;
+    border: none;
+    color: rgba(0, 0, 255, 0.699);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.welcome {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 13px;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+/* 정보 표시 박스 */
+.info {
+    gap: 8px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 반반 인덱스 응용  */
+    text-align: left;
+}
+
+.info h4 {
+    margin: 0;
+    font-size: 12px;
+    color: #b6b6b6;
+}
+
+.info p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+#logoutclick, #drawclick {
+    flex: 1;         /* 버튼 크기를 동일하게 반반 나눔 */
+    width: 100%;     
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #f0f0f0;
+    margin-left: 0;  
+}
+#logoutclick {
+    background-color: #ebf0f7; }
+
+#drawclick {
+    background-color: #fde2e2;
+    color: #f56c6c; }
+
+.hidden {
+    display: none;
+}

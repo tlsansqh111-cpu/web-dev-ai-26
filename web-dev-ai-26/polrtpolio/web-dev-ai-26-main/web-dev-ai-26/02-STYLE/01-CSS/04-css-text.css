@@ -1,0 +1,86 @@
+@import url();
+/* font-family */
+.ff1 {
+    font-family: "돋움","NOTO Sans KR",sans-serif;
+}
+.ff2 {
+    font-family:"궁서", serif;
+}
+/* font-size */
+.fs1 {
+    font-size: 20px;
+}
+.fs2 {
+    /* 부모 사이즈가 30px -> 30 * 2 = 60px */
+    font-size: 2em;
+}
+/* 웹사이트 기준 기본 사이즈가 16px -> 16 * 2 = 32px */
+.fs3 {
+    font-size: 2rem;
+}
+.fs4 {
+    font-size: 2vw;
+}
+/* clamp(최소값. 기준값, 최대값) */
+.fs5 {
+    font-size: clamp(1rem, 2vw, 2rw);
+}
+/* font-weigt */
+.fw2 {
+    font-weight: bold;
+}
+.fw3 {
+    font-weight: 100;
+}
+/* line-heiht: 줄간격 */
+.lh {
+    line-height: 1.8;
+}
+/* letter-spacing : 글자 간격 */
+
+.l h {
+    line-spacing: 5px;
+}
+/* */
+.ta1 {
+    text-align: left;
+}
+.ta2 {
+    text-align: center;
+}
+.ta3 {
+    text-align: right
+}
+/*color 브라우저 인식하는 기본 색상명 (web safe colors 216가지) */
+.c-name {
+    color: red;
+}
+.c-16 {
+    /* #RRGGBB */
+    color: #832e2e;
+}
+.c-rgb {
+    /* red(0~255), green(0~255), blue(0~255), alpha(투명도, 0~1) */
+    color: rgb(93, 43, 43);
+    background: rgba(0, 0, 0, 0.1);
+}
+.c-hsl {
+    /* # 생상환 (0~360). 채도(0~100%), 밝기(0~100%) */
+    color: hsl(200, 50%, 50%);
+}
+/* text-decoration */
+.td1 {
+    text-decoration: underline;
+}
+.td2 {
+    text-decoration: none;
+}
+
+.to {
+    width: 130px;
+    background: pink;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+

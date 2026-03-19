@@ -5,6 +5,6 @@
       데이터베이스를 관리하는 프로그램
    - RDBMS(realtional database management system): 관계형 데이터베이스 관리 시스템
       예) MySQL, Oracle, PostgreSQL
-
-   - 엔티티(Entity)
+ ㅁ
+   - 엔티티(Entity) : 같은 성격을 가진 데이터를 묶어놓는 큰 주제
 */

@@ -225,3 +225,15 @@ DELETE FROM users WHERE id = 3;
 SELECT * FROM recipes;    
 SELECT * FROM users;
     
+접기
+
+
+
+
+
+
+
+
+
+
+
